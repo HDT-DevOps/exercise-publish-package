@@ -1,13 +1,13 @@
 name: Package Publish
 on: push
 jobs:
-  publish package:
+  publish-package:
     runs-on: ubuntu-latest
     steps:
      - name: checkout repository
        uses: actions/checkout@v1
      - uses: actions/setup-node@v1
-        with:
+       with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
      - run: npm install
